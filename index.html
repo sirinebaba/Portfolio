@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sirine Baba - Developer Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	body {
+		height: 100vh;
+  width: 100vw;
+	}
+@media (min-width: 768px) {
+	#Home {
+		height: 100%;
+	}
+  #aboutme {
+    height: 100%;
+  }
+  #experience {
+    height: 100%;
+  }
+  .animate {
+    animation-duration: 0.3s;
+    -webkit-animation-duration: 0.3s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+#test12 {
+  background-image: url("AUB.jpeg");
+}
+#image {
+    height:430px;
+    background-image: url("Graduation.jpg");
+    float: right; 
+    width: 320px; 
+    margin-left: 2em;
+    background-repeat:no-repeat;
+    }
+
+   .nav-link{
+   		color: white !important;
+   }
+   .navbar-brand{
+   		color: white !important;
+   }
+
+   .wrapper { 
+  overflow:hidden;
+}
+
+.wrapper div {
+   min-height: 200px;
+   padding: 10px;
+}
+#one {
+  float:left; 
+  margin-right:20px;
+  width:500px;
+  height:400px;
+}
+#two { 
+  background-color: white;
+  overflow:hidden;
+  margin:10px;
+  min-height:170px;
+}
+
+.container1 {
+  position: relative;
+  width: 45%;
+  max-width: 800px;
+  min-width:470px;
+  margin:10px;
+}
+
+.image1 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle1 {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  width: 80%;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container1:hover .image1 {
+  opacity: 0.3;
+}
+
+.container1:hover .middle1 {
+  opacity: 1;
+}
+
+.text1 {
+  background-color: #11135f;
+  color: white;
+  font-size: 12px;
+  /*padding: 16px 32px;*/
+  padding: 3px 3px;
+}
+
+#desktopTable {
+  display: block;
+}
+#mobileTable {
+  display: none
+}
+
+.introSmall{
+    font-size: 50px;
+    color:white;
+  }
+ .introBig{
+    font-size: 30px;
+    color: yellow;
+  }
+@media screen and (max-width: 768px) {
+  #Home {
+    height: 100%;
+  }
+   .introSmall{
+    font-size: 20px;
+    color:white;
+  }
+ .introBig{
+    font-size: 30px;
+    color:yellow;
+  }
+   #one { 
+    float: none;
+    margin-right:0;
+    border:0;
+    border-bottom:2px solid #000; 
+    position:absolute;   
+    width:90%;
+  height:auto;
+  }
+  #two{
+  	float:none;
+  	position: relative;
+  	top:350px;
+  	color:red;
+  	margin-right:0;
+  	margin-left:0;
+  	border: 2px solid black;
+  }
+  .container1 {
+    width:100%;
+    min-width:20px;
+  }
+  .text1 {
+    font-size: 10px;
+  }
+  .middle1 {
+    width:90%;
+  }
+  #mobileTable {
+    display: block;
+  }
+  #desktopTable{
+  display: none;
+ }
+
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-light bg-light navbar-fixed-top fixed-top" style="position: fixed;background-color:#11135f !important; border-bottom-color:#8b0000 !important; border-bottom-width: 2px !important; border-bottom-style: solid;">
+  <div class="container">
+    <a class="navbar-brand" href="#">Sirine Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+      	<li class="nav-item dropdown">
+          <a class="nav-link" href="#Home" id="" role="" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">
+            Home
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#aboutme" id="" role="" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">
+            About Me
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#skills" id="" role="" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">
+            Skills
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#projects" id="" role="" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">
+            Projects
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#experience" id="" role="" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">
+            Experience
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="Home" class="container-fluid" style = "overflow: hidden;
+  width: 100%;position: relative;background-color:#11135f !important;padding-top: 100px;">
+  <div style = "margin: auto;
+  width: 80%;
+  padding: 10px;">
+  <p class = "introSmall">Hi, my name is</p>
+  <p class = "introBig">SIRINE,</p>
+  <p class = "introBig">I build web applications!</p>
+
+  <p class = "introSmall">I'm an application developer specialized in building websites that solve real world problems and 
+  	provide users with the best experience. I'm currently working at University of Irvine mainly with .Net and
+  	C# development.
+   </p>
+</div>
+</div>
+
+<div id="aboutme" class="container-fluid" style = "overflow: hidden;
+  width: 100%;position: relative;background-image: url('Section1.jpg');padding-top: 70px;">
+  <h1 style = "color: #11135f;">Who I am</h1>
+  <div style = "margin: auto;
+  width: 95%;
+  padding: 10px;max-width: 1100px">
+    <p id = "image"> </p>
+    <h3></h3>
+    <p>Born and raised in Lebanon, I speak three languages fluently.</p>
+    <p>Graduating with a degree in <strong>Computer Science</strong> at the American University of Beirut (AUB) in 2017  
+    has enabled me to acquire a rich programming skill-set.</p>
+    <p>During the past 5 to 6 years, I got the opportunity to work in <strong>three</strong> different <strong>countries</strong> Lebanon, Dubai
+      and Irvine and create different <strong>web</strong> and <strong>report</strong> projects for three different companies, hospital, retail and 
+      univeristy and using different modern and old technologies.</p>
+    <p>When I'm not coding I play tennis, Ice Skating, rock climbing and I'm currently trying to achieve my life goal of <strong>travelling</strong> the world!</p>
+    <p>You can read more about me on my <a href = "https://www.linkedin.com/in/sirine-baba-304924179" target = "_blank">Linkedin</a> page, or check 
+      my <a href = "https://github.com/sirinebaba" target = "_blank">Github</a> account for some cool projects.</p>
+    <br />
+</div>
+</div>
+
+<div id="skills" class="container-fluid" style = "overflow: hidden;
+  width: 100%;position: relative;padding-top: 70px;display: inline-block">
+  <h1 style = "color: #11135f;">Skills</h1><br/><br/>
+  <div style = "margin: auto;
+  width: 95%;
+  padding: 10px;">
+   <img src="Test.png" alt="Lights" style="width:100%;max-width:400px"> 
+   <img src="Test2.png" alt="Lights" style="width:100%;max-width:400px"> 
+   <img src="Test3.png" alt="Lights" style="width:100%;max-width:400px"> 
+   <img src="Test4.png" alt="Lights" style="width:100%;max-width:400px"> 
+   <img src="Test5.png" alt="Lights" style="width:100%;max-width:400px"> 
+  </div>
+</div>
+
+<div id="projects" class="container-fluid" style = "overflow: hidden;
+  width: 100%;position: relative;padding-top: 70px;background-image: url('Section1.jpg');">
+   <h1 style = "color: #11135f;">Some of my Projects</h1>
+  <div style = "margin: auto;
+  width: 95%;
+  padding: 10px;">
+<div>
+
+<div class="container1" style = "display: inline-block;">
+  <h4>TouristGo</h2>
+  <img src="Project2.png" alt="Avatar" class="image1">
+  <div class="middle1">
+    <div class="text1"><ul>
+          <li>Team size: 3</li>
+          <li>Languages: Java, XML</li>
+          <li>Database: Firebase</li>
+          <li>Project Description: Android mobile application that enables users (tourists of cities and places) to be
+              guided to the “Best View” location for taking picture in a city. By Making use of geo-data (google maps) a tourist can either 
+              plan for his trip or choose a trip from the suggested trips.</li>
+          <li><a href="https://github.com/sirinebaba/TouristGo" target = "_blank">Click here to view project Code</a></li></ul></div>
+  </div>
+</div>
+
+<div class="container1" style = "display: inline-block;">
+  <h4>AUBMC Admission Tracking</h2>
+  <img src="Project6.jpg" alt="Avatar" class="image1" style = "height: 60%!important">
+  <div class="middle1">
+    <div class="text1"><ul>
+          <li>Team size: 1</li>
+          <li>Languages: HTML 5, CSS 3, Jquery, MVC, .Net, C#.</li>
+          <li>Database: SQL Server</li>
+          <li>Project Description: Created during my internship at AUBMC, Go live date was Friday 11 November 2016. It was my first web application developed and implemented while I was still a student where AUBMC staff can track all patients' admission, sort order filters and view all patients' admissions details.</li></ul></div>
+  </div>
+</div>
+
+<div class="container1" style = "display: inline-block;">
+  <h4>Online Restaurants</h2>
+  <img src="Project3.png" alt="Avatar" class="image1">
+  <div class="middle1">
+    <div class="text1"><ul>
+          <li>Team size: 2</li>
+          <li>Languages: HTML 5, CSS 3, JavaScript, PHP, XML, JSON, AJAX.</li>
+          <li>Database: MySQL</li>
+          <li>Project Description: Web project application that enables users to order food online. A user can login, view
+            or search for the different restaurants, view the menus and order his food.</li>
+          <li><a href="https://github.com/sirinebaba/OnlineResturants" target = "_blank">Click here to view project</a></li></ul></div>
+  </div>
+</div>
+
+<div class="container1" style = "display: inline-block;">
+  <h4>Online Shopping</h2>
+  <img src="Project1.png" alt="Avatar" class="image1">
+  <div class="middle1">
+    <div class="text1"><ul>
+          <li>Team size: 1</li>
+          <li>Languages: html, css3, JavaScript, php, xml, json, Ajax</li>
+          <li>Database: MySql</li>
+          <li>Project description: Web application that enables users (women/men/kids) to view shopping items (clothes/makeup/shoes/
+              accessories...) from different shopping stores mixed. The items (read from database) can be sorted by type/ color... and are viewed in the form of list images. Users can order the items and admins can add items and view the ordered
+              items depending on the store.</li>
+          <li><a href="https://github.com/sirinebaba/OnlineResturants" target = "_blank">Click here to view project Code</a></li></ul></div>
+  </div>
+</div>
+
+
+<div class="container1" style = "display: inline-block;">
+  <h4>Virgin Megastore D365</h2>
+  <img src="Project5.jpg" alt="Avatar" class="image1">
+  <div class="middle1">
+    <div class="text1"><ul>
+          <li>Project description: Implementation of Microsoft dynamics D365 in November 2020 across all Virgin Megastore offices in MENA. My role: created data migration scripts using the old RPG program - Assisted with the implementation during go live by supporting end users, tracking issues and setting up priorities - Created Power BI report for sales analysis after go live.</div>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="experience" class="container-fluid" style = "overflow: hidden;
+  width: 100%;position: relative;padding-top: 70px;background-image: url('Section1.jpg');">
+   <h1 style = "color: #11135f;">Career Timeline</h1>
+  <div style = "margin: auto;
+  width: 95%;
+  padding: 10px;">
+
+  <table style="width:90%" id="mobileTable">
+  <tr>
+    <td style="border-right: 2px solid black;"><img src = "AUB.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <th style = "color:green; text-align: center">2014</th>
+     <td style = "vertical-align: top; padding-left:5px; padding-bottom: 10px"><strong>AUB Student</strong><br /><i>- One year part time internship at AUBMC.<br/>- Go live of first web app. <br/>- Tourist Go FYP mobile app</i></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid black;"><img src = "AUBMC.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <th style = "color:violet; text-align: center">2017</th>
+    <td style = "vertical-align: top; padding-left:5px; padding-bottom: 10px"><strong>Programmer Analyst</strong><br />- Technologies: SQL, JS, C#, .Net, MVC. </td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid black;"><img src = "AUBMC.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <th style = "color:blue; text-align: center">2018</th>
+    <td style = "vertical-align: top; padding-left:5px; padding-bottom: 10px"><strong>Application Specialist</strong><br /><i>- Support, training users. <br>
+                            - Manual software Quality Assurance. <br />- Technologies: SQL, JS, C#, .Net, MVC.</i> </td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid black;"><img src = "Geek.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <th style = "color:purple; text-align: center">2019</th>
+    <td style = "vertical-align: top; padding-left:5px; padding-bottom: 10px"><strong>Instructor</strong><br /><i>- Progamming classes<br />- Commication Skills</i></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid black;"><img src = "Virgin.jpeg" width = "70px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <th style = "color:pink; text-align: center">2020</th>
+    <td style = "vertical-align: top; padding-left:5px; padding-bottom: 10px"><strong>Jr Software Development Specialist</strong><br /><i>- Support the implementation of microsoft Dynamics across all MENA Region.<br />- Data migration using RPG. <br />- Power BI reports </i></td>
+  </tr>
+  <tr>
+    <td style="border-right: 2px solid black;"><img src = "UCI.png" width = "70px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <th style = "color:darkblue; text-align: center">2021 - now</th>
+     <td style = "vertical-align: top; padding-left:5px; padding-bottom: 10px"><strong>Application Developer</strong><br /><i>- Scrum Master certification. <br />- 3 days UC tech conference. <br />
+                            - 6 Weeks, Sessions LEAP program. <br /> - Technologies: CI, Git, Jenkins, Access db, c#, .Net, MVC, classic ASP...</i> </td>     
+  </tr>
+                             
+</table>
+<table style="width:90%" id = "desktopTable">
+  <tr style="border-bottom: 2px solid black;">
+    <td><img src = "AUB.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <td><img src = "AUBMC.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <td><img src = "AUBMC.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></th>
+    <td><img src = "Geek.png" width = "100px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <td><img src = "Virgin.jpeg" width = "70px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+    <td><img src = "UCI.png" width = "70px" style="display: block;margin-left: auto;margin-right: auto;"></td>
+  </tr>
+  <tr>
+    <th style = "color:green; text-align: center">2014</th>
+    <th style = "color:violet; text-align: center">2017</th>
+    <th style = "color:blue; text-align: center">2018</th>
+    <th style = "color:purple; text-align: center">2019</th>
+    <th style = "color:pink; text-align: center">2020</th>
+    <th style = "color:darkblue; text-align: center">2021 - now</th>
+  </tr>
+  <tr>
+    <th style = "vertical-align: top; padding-left:5px">AUB Student</th>
+    <th style = "vertical-align: top; padding-left:5px">Programmer Analyst</th>
+    <th style = "vertical-align: top; padding-left:5px">Application Specialist</th>
+    <th style = "vertical-align: top; padding-left:5px">Instructor</th>
+    <th style = "vertical-align: top; padding-left:5px">Jr Software Development Specialist</th>
+    <th style = "vertical-align: top; padding-left:5px">Application Developer</th>
+  </tr>
+  <tr>
+    <td style = "width:16%; vertical-align: top; padding-left:5px"><i>- One year part time internship at AUBMC.<br/>- Go live of first web app. <br/>- Tourist Go FYP mobile app</i></td>
+    <td style = "width:16%; vertical-align: top; padding-left:5px"><i>- Technologies: SQL, JS, C#, .Net, MVC.</i> </td>
+    <td style = "width:16%; vertical-align: top; padding-left:5px"><i>- Support, training users. <br>
+                            - Manual software Quality Assurance. <br /><i>- Technologies: SQL, JS, C#, .Net, MVC. </i></td>
+    <td style = "width:16%; vertical-align: top; padding-left:5px"><i>- Progamming classes<br />- Commication Skills</i></td>
+    <td style = "width:16%; vertical-align: top; padding-left:5px"><i>- Support the implementation of microsoft Dynamics across all MENA Region.<br />- Data migration using RPG. <br />- Power BI reports</i> </td>
+    <td style = "width:26%; vertical-align: top; padding-left:5px"><i>- Scrum Master certification. <br />- 3 days UC tech conference. <br />
+                            - 6 Weeks, Sessions LEAP program. <br /><i>- Technologies: CI, Git, Jenkins, Access db, c#, .Net, MVC, classic ASP...</i> </td>                              
+  </tr>
+</table>
+
+</div>
+</div>
+
+
+
+</body>
+<script>
+$(document).ready(function(){
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+})
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+</html>
